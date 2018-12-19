@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
     tools:context=".MainActivity">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/search"
-        android:layout_marginTop="16dp"
+        android:hint="@string/search_editText"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="120dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -28,11 +29,13 @@
 
     <Button
         android:id="@+id/search_button"
+        android:background="@drawable/round_corners"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorWhite"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/search"/>
+        android:text="@string/search_action"/>
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
@@ -55,6 +58,7 @@
         android:background="@color/colorWhitePink"/>
 
     <TextView
+        android:id="@+id/empty_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/error_zero_coindices"

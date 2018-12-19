@@ -9,6 +9,7 @@ import com.liverpool.liverpool.R;
 import com.liverpool.liverpool.common.PLPHolder;
 import com.liverpool.liverpool.modules.repository.viewmodel.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<PLPHolder> {
@@ -33,5 +34,13 @@ public class HomeAdapter extends RecyclerView.Adapter<PLPHolder> {
     @Override
     public int getItemCount() {
         return products.size();
+    }
+
+    public void addItems(List<Product> newProducts) {
+        products.addAll(newProducts);
+    }
+
+    public void clearList() {
+        products = new ArrayList<>();
     }
 }
